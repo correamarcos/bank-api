@@ -18,8 +18,9 @@ Este projeto de banco foi desenvolvido como parte do desafio de projeto do bootc
 ```mermaid
 classDiagram
     class User {
-        +int id
+        +Long id
         +String name
+        +String lastName
         +String cpfCnpj
         +Account account
         +List~Card~ cards
@@ -27,23 +28,25 @@ classDiagram
     }
 
     class Account {
+        +Long id
         +String number
         +String agency
-        +double balancer
-        +double limit
+        +BigDecimal balancer
+        +BigDecimal limit
     }
 
     class Card {
+        +Long id
         +String number
-        +double limit
-        +String valid
-        +int cvc
-        +boolean blocked
-        +boolean isDigital
+        +BigDecimal limit
+        +String validity
+        +String cvc
+        +Bloolean blocked
+        +Boolean isDigital
     }
 
     class Feature {
-        +int id
+        +Long id
         +String cod
         +String icon
         +String description
