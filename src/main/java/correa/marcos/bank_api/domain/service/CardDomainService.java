@@ -28,16 +28,16 @@ public class CardDomainService {
 
         if (card.getLimit() == null) card.setLimit(new BigDecimal(2500));
         if (StringUtils.isEmpty(card.getValidity()))
-            card.setValidity(getExpiryMonthYear(createExpirateDate()));
+            card.setValidity(getExpiryMonthYear(createExpirateDate(card.getIsDigital() ? 3 : 5)));
         if (StringUtils.isEmpty(card.getCvc()))
             card.setCvc(Integer.toString(generateRandomCvcCard()));
 
         card.setBlocked(Boolean.FALSE);
     }
 
-    public LocalDate createExpirateDate(){
+    public LocalDate createExpirateDate(Integer yearsToAdd){
         LocalDate currentDate = LocalDate.now();
-        return currentDate.plusYears(5);
+        return currentDate.plusYears(yearsToAdd);
     }
 
     public String getExpiryMonthYear(LocalDate expiryDate) {
