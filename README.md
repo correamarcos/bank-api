@@ -76,6 +76,6 @@ Agradeço imensamente a oportunidade de participar deste bootcamp, que apresento
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
 
 
-Desenvolvido com ❤️ por [Marcos Correa](https://github.com/correamarcos) .
+Desenvolvido com por [Marcos Correa](https://github.com/correamarcos) .
 
 
